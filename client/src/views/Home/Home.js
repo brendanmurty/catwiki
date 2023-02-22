@@ -7,9 +7,9 @@ function Home() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("/api")
+    fetch("/api/catbreed")
       .then((res) => res.json())
-      .then((data) => setData(data.message));
+      .then((data) => setData("Found " + data.length + " cat breeds"));
   }, []);
 
   return (

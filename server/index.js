@@ -1,6 +1,7 @@
 const path = require("path"),
       express = require("express"),
       PORT = process.env.PORT || 3001,
+      router = express.Router(),
       app = express(),
       dotenv = require("dotenv");
 
@@ -8,18 +9,20 @@ const path = require("path"),
 // the "process.env" object
 require('dotenv').config();
 
-// Have Node serve the files for our built React app
+// Send supported API endpoints to the relevant controller
+const CatBreedController = require("./controllers/CatBreedController.js");
+router.get('/api/catbreed', CatBreedController.get);
+app.use('/', router);
+
+// Serve the built client app files
 app.use(express.static(path.resolve(__dirname, "../client/build")));
 
-app.get("/api", (req, res) => {
-  res.json({ message: "Hello from CatWiki!" });
-});
-
-// All other GET requests not handled before will return our React app
+// Send all other GET requests to the client app
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
 });
 
+// Start the API server
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });

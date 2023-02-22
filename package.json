@@ -2,7 +2,7 @@
   "name": "catwiki",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "build": "cd client && npm run build",
     "start": "npm run build && node server/index.js",
