@@ -1,9 +1,12 @@
-const path = require("path");
-const express = require("express");
+const path = require("path"),
+      express = require("express"),
+      PORT = process.env.PORT || 3001,
+      app = express(),
+      dotenv = require("dotenv");
 
-const PORT = process.env.PORT || 3001;
-
-const app = express();
+// Load the configuration values from ".env" and add them to
+// the "process.env" object
+require('dotenv').config();
 
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, "../client/build")));

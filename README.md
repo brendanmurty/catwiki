@@ -31,10 +31,13 @@ Brendan Murty
 After installing [Node and NPM](https://nodejs.org/) on your local machine, open a Terminal window, navigate to the directory containing a local clone of this repository, then run: 
 
 ```
+cp -n example.env .env
 npm install
 cd client
 npm install
 ```
+
+Then edit `.env` and add your [Cat API key](https://thecatapi.com/signup) as the value for the `CATWIKI_SERVER_CATAPI_KEY` variable.
 
 ## Starting the backend
 

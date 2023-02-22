@@ -11,6 +11,7 @@
   "author": "Brendan Murty <brendan@murty.au> (https://murty.au)",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.17.2"
   },
   "engines": {
