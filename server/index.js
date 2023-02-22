@@ -5,13 +5,16 @@ const path = require("path"),
       app = express(),
       dotenv = require("dotenv");
 
-// Load the configuration values from ".env" and add them to
-// the "process.env" object
+// Load the configuration values from ".env" and add them to the "process.env" object
 require('dotenv').config();
 
 // Send supported API endpoints to the relevant controller
 const CatBreedController = require("./controllers/CatBreedController.js");
+const CatPhotosByBreedController = require("./controllers/CatPhotosByBreedController.js");
+
 router.get('/api/catbreed', CatBreedController.get);
+router.get('/api/catphotosbybreed/:id', CatPhotosByBreedController.get);
+
 app.use('/', router);
 
 // Serve the built client app files

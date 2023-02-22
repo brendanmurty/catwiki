@@ -12,6 +12,12 @@ function Home() {
       .then((data) => setData("Found " + data.length + " cat breeds"));
   }, []);
 
+  React.useEffect(() => {
+    fetch("/api/catphotosbybreed/beng")
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
+
   return (
     <div className="Home">
       <header className="Home-header">
