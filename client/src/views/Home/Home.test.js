@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+
+import Home from './Home';
 
 test('renders loading placeholder', () => {
-  render(<App />);
+  render(<Home />);
   const linkElement = screen.getByText(/Loading.../i);
   expect(linkElement).toBeInTheDocument();
 });

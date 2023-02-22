@@ -19,8 +19,11 @@ Website [murty.au](https://murty.au)
 
 - 
 
-## Ideas
+## Thoughts and Future Improvement Ideas
 
+- Each different page should have it's own `view` directory
+  - Implement the component nature of React for the pages themselves too
+  - Makes it easier for larger teams to work together on the same repository without often causing merge conflicts
 - 
 
 ## Initial setup
