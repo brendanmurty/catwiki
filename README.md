@@ -30,7 +30,8 @@ Website [murty.au](https://murty.au)
   - Local environments must use this configuration in a pre-commit Git hook
   - Each Pull Request must then check changed code meets the code style rules
   - This will lower the risk of low-value Pull Request discussions about minor code style issues
-- 
+- For this example project, I've been committing directly to the `main` branch
+  - Working in an engineering team is often best served by using the [GitFlow branching model](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
 ## Initial setup
 
