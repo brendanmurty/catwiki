@@ -24,6 +24,12 @@ Website [murty.au](https://murty.au)
 - Each different page should have it's own `view` directory
   - Implement the component nature of React for the pages themselves too
   - Makes it easier for larger teams to work together on the same repository without often causing merge conflicts
+- A code style should be established
+  - The engineering team should work together to create a set of code style rules together
+  - This should then be documented and finalised by implementing linting configuration in the repository
+  - Local environments must use this configuration in a pre-commit Git hook
+  - Each Pull Request must then check changed code meets the code style rules
+  - This will lower the risk of low-value Pull Request discussions about minor code style issues
 - 
 
 ## Initial setup
