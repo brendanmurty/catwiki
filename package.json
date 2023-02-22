@@ -6,7 +6,8 @@
   "scripts": {
     "build": "cd client && npm run build",
     "start": "npm run build && node server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "cp -n example.env .env && npm install && cd client && npm install"
   },
   "author": "Brendan Murty <brendan@murty.au> (https://murty.au)",
   "license": "ISC",
