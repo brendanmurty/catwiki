@@ -1,6 +1,7 @@
 import React from "react";
 
 import logo from "assets/logo.svg";
+import Loading from "components/Loading/Loading";
 import "./Home.css";
 
 function Home() {
@@ -20,10 +21,18 @@ function Home() {
 
   return (
     <div className="Home">
-      <header className="Home-header">
-        <img src={logo} className="Home-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
+      { !data ? (
+        <Loading logo={logo} />
+      ) : (
+      <>
+        <header className="Home-header">
+          <img src={logo} className="Home-logo" alt="logo" />
+        </header>
+        <main>
+          <p>{data}</p>
+        </main>
+      </>
+      )}
     </div>
   );
 }
