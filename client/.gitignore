@@ -11,13 +11,21 @@
 # production
 /build
 
-# misc
+# operating system related
 .DS_Store
+$RECYCLE.BIN
+thumbs.db
+
+# environment configuration files
+*.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+!example.env
 
+# log files
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
