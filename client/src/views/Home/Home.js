@@ -1,27 +1,33 @@
 import React from "react";
+import Select from "react-select";
 
 import logo from "assets/logo.svg";
 import Loading from "components/Loading/Loading";
 import "./Home.css";
 
 function Home() {
-  const [data, setData] = React.useState(null);
+  const [catBreeds, setCatBreeds] = React.useState(null);
 
   React.useEffect(() => {
     fetch("/api/catbreed")
-      .then((res) => res.json())
-      .then((data) => setData("Found " + data.length + " cat breeds"));
-  }, []);
+      .then((response) => response.json())
+      .then((response) => {
+        // Simplify the cat breeds data so it can be used by the select component
+        let catBreedsSelect = [];
+        response.forEach(catBreed => {
+          catBreedsSelect.push({
+            "value": catBreed.id,
+            "label": catBreed.name
+          });
+        });
 
-  React.useEffect(() => {
-    fetch("/api/catphotosbybreed/beng")
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+        setCatBreeds(catBreedsSelect);
+      });
   }, []);
 
   return (
     <div className="Home">
-      { !data ? (
+      { !catBreeds ? (
         <Loading logo={logo} />
       ) : (
       <>
@@ -29,7 +35,8 @@ function Home() {
           <img src={logo} className="Home-logo" alt="logo" />
         </header>
         <main>
-          <p>{data}</p>
+          <p>Cat breeds:</p>
+          <Select options={catBreeds} />
         </main>
       </>
       )}
