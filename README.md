@@ -5,6 +5,16 @@ It contains a frontend and a backend, with some very basic interaction
 between them. Feel free to modify whatever you wish, or to start 
 completely from scratch! :smiley_cat:
 
+## Initial setup
+
+After installing [Node and NPM](https://nodejs.org/) on your local machine, open a Terminal window, navigate to the directory containing a local clone of this repository, then run: 
+
+```
+npm install
+cd client
+npm install
+```
+
 ## Starting the backend
 
 To start up the backend Node.js server, run the following command in your
