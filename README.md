@@ -10,7 +10,8 @@ Brendan Murty
 
 ## Included Features
 
-- 
+- List cat breeds
+- List photos for a selected cat breed
 
 ## Thoughts and Future Improvement Ideas
 
