@@ -1,19 +1,12 @@
 # CatWiki exercise by Brendan Murty
 
-This is a basic template to get you started with the CatWiki challenge.
-It contains a frontend and a backend, with some very basic interaction
-between them. Feel free to modify whatever you wish, or to start 
-completely from scratch! :smiley_cat:
-
 ## Author
 
 Brendan Murty
 
-Email: [brendan@murty.au](mailto:brendan@murty.au)
-
-GitHub: [brendanmurty](https://github.com/brendanmurty)
-
-Website [murty.au](https://murty.au)
+- Email: [brendan@murty.au](mailto:brendan@murty.au)
+- GitHub: [brendanmurty](https://github.com/brendanmurty)
+- Website: [murty.au](https://murty.au)
 
 ## Included Features
 
