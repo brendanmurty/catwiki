@@ -82,11 +82,7 @@ class Home extends Component {
               options={this.state.catBreeds}
               onChange={this.catBreedSelected} />
 
-            { this.state.catPhotos ? (
-            <ImageList images={this.state.catPhotos} />
-            ) : (
-            <></>
-            )}
+            { this.state.catPhotos ? <ImageList images={this.state.catPhotos} /> : null}
           </main>
         </>
         )}
