@@ -7,6 +7,16 @@ import logo from "assets/logo.svg";
 import "./Home.css";
 import CatBreedDetails from "components/CatBreedDetails/CatBreedDetails";
 
+/**
+ * 
+ * View: Home
+ * 
+ * Displays a loading component until data from the API has been received,
+ * then shows a cat breed select field, allowing the user to select a cat
+ * breed. After a cat breed has been selected, images of cats with that
+ * breed are listed below the select field.
+ * 
+ **/
 class Home extends Component {
   constructor(props) {
     super(props);

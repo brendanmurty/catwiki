@@ -2,6 +2,13 @@ import { Component } from "react";
 
 import "./ImageList.css";
 
+/**
+ * 
+ * Component: ImageList
+ * 
+ * A list of images in a simple grid layout.
+ * 
+ **/
 class ImageList extends Component {
   render() {
     return (

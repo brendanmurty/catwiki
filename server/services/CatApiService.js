@@ -1,5 +1,6 @@
 /**
- * CatApiRequest
+ * 
+ * Service: CatApiRequest
  * 
  * Uses the Cat API configuration values from the ".env" file
  * to send an API request and return the results as a JSON object.

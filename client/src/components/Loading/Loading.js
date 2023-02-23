@@ -2,6 +2,13 @@ import { Component } from "react";
 
 import "./Loading.css";
 
+/**
+ * 
+ * Component: Loading
+ * 
+ * A spinning logo and loading message.
+ * 
+ **/
 class Loading extends Component {
   render() {
     return (

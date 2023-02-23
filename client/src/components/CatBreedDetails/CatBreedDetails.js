@@ -2,6 +2,13 @@ import { Component } from "react";
 
 import "./CatBreedDetails.css";
 
+/**
+ * 
+ * Component: CatBreedDetails
+ * 
+ * A block of summarised information about a cat breed.
+ * 
+ **/
 class CatBreedDetails extends Component {
   render() {
     return (
