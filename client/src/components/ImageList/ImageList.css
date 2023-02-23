@@ -1,13 +1,6 @@
-.ImageList {
-  margin: 20px auto;
-  padding: 0 20px;
-  width: 1250px;
-  max-width: 100%;
-}
-
 .ImageList-list {
   list-style: none outside none;
-  margin: 0 25px 0 0;
+  margin: 20px 25px 0 0;
   padding: 0;
 
   /* Show the images in the list in a 4x4 grid with spacing */

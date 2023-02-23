@@ -6,6 +6,8 @@ class ImageList extends Component {
   render() {
     return (
       <section className="ImageList">
+        <h2>Photos</h2>
+
         <ul className="ImageList-list">
           {this.props.images.map(image => (
           <li key={image.cfa_url}>
