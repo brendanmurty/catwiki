@@ -1,11 +1,11 @@
 .ImageList-list {
   list-style: none outside none;
-  margin: 20px 25px 0 0;
+  margin: 20px 5px 0 0;
   padding: 0;
 
   /* Show the images in the list in a 4x4 grid with spacing */
   display: grid;
-  gap: 25px 25px;
+  gap: 5px;
   grid-template-columns: 1fr fit-content(400px);
   grid-auto-rows: 200px;
   grid-template-areas:
