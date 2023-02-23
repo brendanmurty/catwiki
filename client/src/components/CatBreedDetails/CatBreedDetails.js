@@ -6,12 +6,14 @@ class CatBreedDetails extends Component {
   render() {
     return (
       <section className="CatBreedDetails">
-        <h3>
+        <h1>
           {this.props.catbreed.name}
-        </h3>
+        </h1>
+
         <p>
           {this.props.catbreed.description}
         </p>
+
         <dl>
           <dt>Temperament</dt>
           <dd>{this.props.catbreed.temperament}</dd>
