@@ -21,7 +21,13 @@ exports.CatApiRequest = async function (endpoint, params) {
     '?api_key=' + CatApiKey +
     ( params ? '&' + params.join('&') : '' );
 
-  const apiResponse = await fetch(apiRequestUrl).then(response=> response.json());
+  const apiResponse = await fetch(apiRequestUrl).then((response) => {
+    if (response) {
+      return response.json();
+    }
+
+    return [];
+  });
 
   return apiResponse;
 }
