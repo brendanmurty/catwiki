@@ -1,4 +1,9 @@
 .Home-logo {
   height: 150px;
   pointer-events: none;
+  margin: 0 auto 20px;
+}
+
+.Home-select {
+  color: #000;
 }

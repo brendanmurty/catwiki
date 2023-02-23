@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { Component } from "react";
 import Select from "react-select";
 
 import Loading from "components/Loading/Loading";
@@ -73,11 +73,12 @@ class Home extends Component {
             <img src={logo} className="Home-logo" alt="logo" />
           </header>
           <main>
-            <p>Cat breeds:</p>
 
             <Select
               autoFocus
+              className="Home-select"
               isClearable="true"
+              placeholder="Select a cat breed"
               options={this.state.catBreeds}
               onChange={this.catBreedSelected} />
 

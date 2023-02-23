@@ -10,12 +10,16 @@ Brendan Murty
 
 ## Included Features
 
-- List cat breeds
+- List cat breeds and allow a user to select a cat breed
 - Show details of the selected cat breed
 - List photos for the selected cat breed
 
 ## Thoughts and Future Improvement Ideas
 
+- I have focussed on technical quality here over a more aesthetically pleasing design
+- A UI library would probably be required
+  - For this example project, I've applied my own basic styling via CSS files in the [client/src/styles](client/src/styles) directory
+  - For a more complex system, a UI library like [Bootstrap](https://getbootstrap.com/) would likely save a lot of time
 - Each different page should have it's own `view` directory
   - Implement the component nature of React for the pages themselves too
   - Makes it easier for larger teams to work together on the same repository without often causing merge conflicts
