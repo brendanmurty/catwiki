@@ -5,6 +5,7 @@ import Loading from "components/Loading/Loading";
 import ImageList from "components/ImageList/ImageList";
 import logo from "assets/logo.svg";
 import "./Home.css";
+import CatBreedDetails from "components/CatBreedDetails/CatBreedDetails";
 
 class Home extends Component {
   constructor(props) {
@@ -56,8 +57,6 @@ class Home extends Component {
       fetch("/api/catphotosbybreed/" + event.value)
         .then((response) => response.json())
         .then((response) => {
-          // TODO: load catphotos in to a new photo list component
-          // TODO: show cat breed properties from "this.state.catBreedSelected", add to current features list
           this.setState({ catPhotos: response });
         });
     }
@@ -81,6 +80,8 @@ class Home extends Component {
               isClearable="true"
               options={this.state.catBreeds}
               onChange={this.catBreedSelected} />
+
+            {this.state.catBreedSelected ? <CatBreedDetails catbreed={this.state.catBreedSelected} /> : null}
 
             { this.state.catPhotos ? <ImageList images={this.state.catPhotos} /> : null}
           </main>

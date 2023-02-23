@@ -1,0 +1,13 @@
+.CatBreedDetails {
+  margin: 20px 0;
+}
+
+.CatBreedDetails dl {
+  margin: 20px 0 0;
+}
+
+.CatBreedDetails dt {
+  font-weight: bold;
+  width: 130px;
+  float: left;
+}
