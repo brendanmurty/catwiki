@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "CatWiki",
+  "name": "CatWiki exercise by Brendan Murty",
   "icons": [
     {
       "src": "favicon.ico",
