@@ -1,5 +1,11 @@
 # CatWiki exercise by Brendan Murty
 
+## Summary
+
+An example solution for the CatWiki technical challenge.
+
+![Screenshot](docs/assets/screenshot1.png)
+
 ## Author
 
 Brendan Murty
