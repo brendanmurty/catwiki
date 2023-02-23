@@ -1,14 +1,24 @@
-import React from "react";
+import React, { Component, useEffect } from "react";
 import Select from "react-select";
 
 import logo from "assets/logo.svg";
 import Loading from "components/Loading/Loading";
 import "./Home.css";
 
-function Home() {
-  const [catBreeds, setCatBreeds] = React.useState(null);
+class Home extends Component {
+  constructor(props) {
+    super(props);
 
-  React.useEffect(() => {
+    this.state = {
+      catBreeds: false,
+      catBreedsData: false,
+      catBreedSelected: false,
+      catPhotos: false
+    }
+
+    this.catBreedSelected = this.catBreedSelected.bind(this);
+
+    // Load the cat breeds list
     fetch("/api/catbreed")
       .then((response) => response.json())
       .then((response) => {
@@ -21,27 +31,60 @@ function Home() {
           });
         });
 
-        setCatBreeds(catBreedsSelect);
+        this.setState({ catBreedsData: response });
+        this.setState({ catBreeds: catBreedsSelect });
       });
-  }, []);
+  }
 
-  return (
-    <div className="Home">
-      { !catBreeds ? (
-        <Loading logo={logo} />
-      ) : (
-      <>
-        <header className="Home-header">
-          <img src={logo} className="Home-logo" alt="logo" />
-        </header>
-        <main>
-          <p>Cat breeds:</p>
-          <Select options={catBreeds} />
-        </main>
-      </>
-      )}
-    </div>
-  );
+  catBreedSelected(event) {
+    // Clear previous cat breed and cat photos list so that the page doesn't show previous
+    // data if the select field is emptied or a new field selection is awaiting results
+    this.setState({
+      catBreedSelected: false,
+      catPhotos: false
+    });
+
+    if (event && event.value) {
+      // Set the selected breed
+      const selectedCatBreed = this.state.catBreedsData.find(catBreed => catBreed.id == event.value);
+      this.setState({
+        catBreedSelected: selectedCatBreed
+      });
+
+      // Load the photos for the selected cat breed
+      fetch("/api/catphotosbybreed/" + event.value)
+        .then((response) => response.json())
+        .then((response) => {
+          // TODO: load catphotos in to a new photo list component
+          // TODO: show cat breed properties from "this.state.catBreedSelected", add to current features list
+          this.setState({ catPhotos: response });
+        });
+    }
+  }
+
+  render() {
+    return (
+      <div className="Home">
+        { !this.state.catBreeds ? (
+          <Loading logo={logo} />
+        ) : (
+        <>
+          <header className="Home-header">
+            <img src={logo} className="Home-logo" alt="logo" />
+          </header>
+          <main>
+            <p>Cat breeds:</p>
+            <Select
+              autoFocus
+              isClearable="true"
+              options={this.state.catBreeds}
+              onChange={this.catBreedSelected} />
+          </main>
+        </>
+        )}
+      </div>
+    );
+  }
 }
 
 export default Home;
