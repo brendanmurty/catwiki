@@ -23,6 +23,15 @@ Brendan Murty
 ## Thoughts and Future Improvement Ideas
 
 - I have focussed on technical quality here over a more aesthetically pleasing design
+- Tests would need to be added
+  - For this example project, I have not included tests
+  - Generally, tests should be made at the start of work on a feature
+  - Each test should be written based on the agreed requirements of the feature
+  - For this project, I would at least include tests for
+    - API results are suitable
+    - API authentication errors are handled
+    - The API key is set and a sample request using it returns valid data
+    - Photos are returned when given valid request data
 - A UI library would probably be required
   - For this example project, I've applied my own basic styling via CSS files in the [client/src/styles](client/src/styles) directory
   - For a more complex system, a UI library like [Bootstrap](https://getbootstrap.com/) would likely save a lot of time
