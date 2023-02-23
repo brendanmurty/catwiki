@@ -1,8 +1,9 @@
 import React, { Component, useEffect } from "react";
 import Select from "react-select";
 
-import logo from "assets/logo.svg";
 import Loading from "components/Loading/Loading";
+import ImageList from "components/ImageList/ImageList";
+import logo from "assets/logo.svg";
 import "./Home.css";
 
 class Home extends Component {
@@ -74,11 +75,18 @@ class Home extends Component {
           </header>
           <main>
             <p>Cat breeds:</p>
+
             <Select
               autoFocus
               isClearable="true"
               options={this.state.catBreeds}
               onChange={this.catBreedSelected} />
+
+            { this.state.catPhotos ? (
+            <ImageList images={this.state.catPhotos} />
+            ) : (
+            <></>
+            )}
           </main>
         </>
         )}
